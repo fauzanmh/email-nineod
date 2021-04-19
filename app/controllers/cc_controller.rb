@@ -1,0 +1,2 @@
+class CcController < ApplicationController
+end
