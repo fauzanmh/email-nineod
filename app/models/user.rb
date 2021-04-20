@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :senders, class_name: "sender", foreign_key: "user_id"
-  has_many :receivers, class_name: "receiver", foreign_key: "user_id"
-  has_many :ccs, class_name: "cc", foreign_key: "user_id"
-  has_many :bccs, class_name: "bcc", foreign_key: "user_id"
+  has_many :senders, class_name: "Sender", foreign_key: "user_id"
+  has_many :receivers, class_name: "Receiver", foreign_key: "user_id"
+  has_many :ccs, class_name: "Cc", foreign_key: "user_id"
+  has_many :bccs, class_name: "Bcc", foreign_key: "user_id"
 end

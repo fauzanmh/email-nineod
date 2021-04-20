@@ -1,6 +1,6 @@
 class CreateCcs < ActiveRecord::Migration[6.1]
   def change
-     create_table(:css, primary_key: [:mail_id]) do |t|
+     create_table(:ccs, primary_key: [:mail_id]) do |t|
       t.integer :mail_id, :id => true
       t.integer :user_id
       t.boolean :read_status, default: false
