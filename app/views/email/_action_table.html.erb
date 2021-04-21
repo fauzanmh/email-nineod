@@ -1,0 +1,16 @@
+<td class="action">
+  <%= link_to add_important_path(e.mail_id) do %>
+    <i class="fa fa-bookmark" style="color: <%= 'yellow' if e.important_status %>"></i>
+  <% end %>
+  <% if !@is_trash %>
+    <%= link_to add_starred_path(e.mail_id) do %>
+      <i class="fa fa-star ml-2" style="color: <%= 'yellow' if e.starred_status %>"></i>
+    <% end %>
+    <%= link_to add_snoozed_path(e.mail_id) do %>
+      <i class="fa fa-clock-o ml-2" style="color: <%= 'yellow' if e.snoozed_status %>"></i>
+    <% end %>
+    <%= link_to add_trash_path(e.mail_id), data: {confirm: "Apakah Anda yakin?"} do %>
+      <i class="fa fa-trash ml-2" style="color: <%= 'yellow' if e.trash_status %>"></i>
+    <% end %>
+  <% end %>
+</td>

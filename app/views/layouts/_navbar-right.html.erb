@@ -3,7 +3,11 @@
   <ul class="nav">
     <li class="nav-item">
       <%= link_to inbox_path, class: 'nav-link' do %>
-        <i class="fa fa-inbox"></i> Inbox <span class="badge badge-danger"><%= @inbox_count %></span>
+        <i class="fa fa-inbox"></i> Inbox 
+        <% if @inbox_count > 0%>
+          <span class="badge badge-danger"><%= @inbox_count %>
+          <% end %>
+        </span>
       <% end %>
     </li>
     <li class="nav-item">

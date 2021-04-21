@@ -7,7 +7,7 @@
   </div>
 <% end %>
 <p class="text-center">New Message</p>
-<%= form_for @email, url: email_index_path do |f| %>
+<%= form_for @email, url: update_draft_path(params[:id]) do |f| %>
   <div class="form-row mb-3">
     <%= f.label :to, class: 'col-2 col-sm-1 col-form-label' %>
     <div class="col-10 col-sm-11">
@@ -102,8 +102,8 @@
         <%= button_tag(type: 'submit', class: 'btn btn-primary', value: 'send') do %>
           <i class="fa fa-paper-plane"></i> Send
         <% end %>
-        <%= button_tag(type: 'submit', class: 'btn btn-warning', value: 'draft') do %>
-          <i class="fa fa-file"></i> Draft
+        <%= button_tag(type: 'submit', class: 'btn btn-warning', value: 'update-draft') do %>
+          <i class="fa fa-file"></i> Update Draft
         <% end %>
       </div>
     </div>

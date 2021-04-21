@@ -1,2 +1,0 @@
-class BccController < ApplicationController
-end

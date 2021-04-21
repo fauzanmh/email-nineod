@@ -1,0 +1,8 @@
+<% if @is_drafts %>
+  <td class="name"><%= link_to e.email.name, edit_draft_path(e.mail_id) %></td>
+  <td class="subject"><%= link_to e.email.title, edit_draft_path(e.mail_id) %></td>
+<% else %>
+  <td class="name"><%= link_to e.email.name, detail_path(e.mail_id) %></td>
+  <td class="subject"><%= link_to e.email.title, detail_path(e.mail_id) %></td>
+<% end %>
+<td class="time"><%= e.email.created_at.strftime("%H:%M") %></td>

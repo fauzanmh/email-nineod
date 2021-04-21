@@ -1,0 +1,16 @@
+<main class="message">
+  <div class="details">
+    <div class="title"><%= @email.title %></div>
+    <div class="header">
+      <div class="from">
+        <span><%= @email.name %></span>
+      </div>
+      <div class="date"><b><%= @email.created_at.strftime("%H:%M") %></b></div>
+    </div>
+    <div class="content">
+      <p>
+        <%= @email.message %>
+      </p>
+    </div>
+  </div>
+</main>
